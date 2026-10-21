@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f2eb">
+  <meta name="description" content="Lista de presentes do chá de panela de Estêvão e Clara.">
+  <title>Chá de Panela | Estêvão & Clara</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-decoration decoration-one">✿</div>
+    <div class="hero-decoration decoration-two">❀</div>
+    <div class="hero-content">
+      <p class="eyebrow">UM NOVO LAR, UMA NOVA HISTÓRIA</p>
+      <h1>Estêvão <span>&</span> Clara</h1>
+      <div class="divider-flower"><span></span> ❦ <span></span></div>
+      <p class="hero-subtitle">Nosso chá de panela</p>
+      <p class="hero-copy">Estamos preparando nosso cantinho com muito amor. Escolha um presente para fazer parte dessa nova etapa da nossa história!</p>
+      <a class="hero-cta" href="#presentes">Ver lista de presentes <span>↓</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro-section">
+      <p class="section-kicker">COM CARINHO,</p>
+      <h2>Um presente, uma lembrança</h2>
+      <p>Ficamos felizes em compartilhar esse momento com você. Selecione um item da lista e informe seu nome para reservar. Obrigado por fazer parte da nossa história!</p>
+      <h3 class="hero-copy">Se preferir você pode nos presentear por pix é 12958576779 chave CPF Banco Inter Estevao Paulo Pereira</h3>
+    </section>
+
+    <section id="presentes" class="gifts-section">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">NOSSA LISTA</p>
+          <h2>Presentes para o nosso lar</h2>
+        </div>
+        <div class="progress-card">
+          <span id="gift-count">0 de 0 escolhidos</span>
+          <div class="progress-track"><div id="progress-fill"></div></div>
+        </div>
+      </div>
+
+      <div class="toolbar">
+        <label class="search-box">
+          <span aria-hidden="true">⌕</span>
+          <input id="search" type="search" placeholder="Buscar presente..." aria-label="Buscar presente">
+        </label>
+        <select id="category-filter" aria-label="Filtrar por categoria">
+          <option value="">Todas as categorias</option>
+        </select>
+        <select id="status-filter" aria-label="Filtrar por disponibilidade">
+          <option value="all">Todos os presentes</option>
+          <option value="available">Disponíveis</option>
+          <option value="reserved">Já escolhidos</option>
+        </select>
+      </div>
+
+      <div id="gift-grid" class="gift-grid" aria-live="polite">
+        <div class="loading-state">Preparando nossa lista...</div>
+      </div>
+      <p id="empty-state" class="empty-state" hidden>Nenhum presente encontrado. Tente mudar sua busca ou os filtros.</p>
+    </section>
+
+    <section class="note-section">
+      <div class="note-icon">♡</div>
+      <div>
+        <h2>Já escolheu e mudou de ideia?</h2>
+        <p>Sem problema! Clique em “Cancelar reserva” no presente e informe o mesmo nome usado ao reservar. Assim, outra pessoa poderá escolhê-lo.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-flower">❦</div>
+    <p>Feito com amor por Estêvão & Clara</p>
+    <span>Obrigado por celebrar esse momento com a gente.</span>
+  </footer>
+
+  <dialog id="reserve-dialog" class="reserve-dialog">
+    <form id="reserve-form" method="dialog">
+      <button type="button" class="dialog-close" id="close-dialog" aria-label="Fechar">×</button>
+      <p class="section-kicker">QUE ESCOLHA ESPECIAL!</p>
+      <h2>Reservar presente</h2>
+      <p id="dialog-gift-name" class="dialog-gift-name"></p>
+      <label for="guest-name">Seu nome</label>
+      <input id="guest-name" name="name" maxlength="80" required placeholder="Como podemos te chamar?">
+      <p class="form-hint">Use seu nome para que você possa cancelar a reserva depois, se precisar.</p>
+      <button class="submit-button" type="submit">Confirmar reserva</button>
+      <p id="form-error" class="form-error" role="alert"></p>
+    </form>
+  </dialog>
+
+  <script src="/app.js"></script>
+</body>
+</html>

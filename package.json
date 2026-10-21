@@ -1,0 +1,13 @@
+{
+  "name": "cha-panela-estevao-clara",
+  "version": "1.1.0",
+  "description": "Lista de presentes de chá de panela de Estêvão e Clara",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
